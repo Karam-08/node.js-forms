@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Student Sign-Up</h1>
+        <section class="card">
+            <form method="POST" action="/api/students" id="student-form">
+                <div class="grid">
+                    <label>First Name:
+                        <input type="text" name="firstName" required>
+                    </label>
+                    <label>Last Name:
+                        <input type="text" name="lastName" required>
+                    </label>
+                    <label>Email:
+                        <input type="email" name="email" required>
+                    </label>
+                    <label>Grade Level: (9-12)
+                        <input type="number" name="gradeLevel" min="9" max="12" required>
+                    </label>
+                </div>
+                <button type="submit">Submit Form:</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>View Saved JSON Students</h2>
+            <button>Refresh List</button>
+            <pre id="js-list" class="result"></pre>
+        </section>
+    </main>
+</body>
+</html>
